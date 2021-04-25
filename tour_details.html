@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Triport</title>
+  <meta name="author" content="Mónica Ilenia Tardón Vera" />
+  <link rel="icon" href="img/logo.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+  <!-- style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/logout.js"></script>
+  <script src="js/simplescrollup.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <!--::header part start::-->
+  <header>
+    <div class="container">
+      <div class="row align-items-center ">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+            <a class="navbar-brand" href="index.html"> <img src="img/logo2.png" alt="logo" style="width:60px;"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse main-menu-item justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="hotel.html">Hotel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="packages.html">Packages</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown_1" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Tour
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                    <a class="dropdown-item" href="tour_details.html">detalles</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+            <a href="game.html" class="btn game" role="button">Juega</a>
+            <a class="nav-link" href="login.html"><i class="far fa-user"></i></a>
+            <a class="nav-link" href="rss.xml"><i class="fas fa-rss"></i></a>
+            <a class="nav-link" href="shopping.html"><i class="fas fa-shopping-cart"></i></a>
+            <a class="nav-link" id="btnLogout"><i class="fas fa-sign-out-alt"></i></a><a id="user"></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header part end-->
+
+  <!-- breadcrumb start-->
+  <section class="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div>
+            <div class="text-center">
+              <br>
+              <br>
+              <br>
+              <h1>Detalles de los Tours</h1>
+              <p>Inicio . Tour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- breadcrumb end-->
+
+  <!-- tour details content css start-->
+  <section class="jumbotron">
+    <div class="row">
+      <div class="col-sm-3" id="spy">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item"><a class="nav-link active" href="#scroll1">Tour Nº1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scroll2">Tour Nº2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scroll3">Tour Nº3</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 scrollspy-example" data-spy="scroll" data-target="#spy">
+        <div id="scroll1">
+          <h3 class="text-center">4 DÍAS EN ROMA CON VISITA </h3>
+          <p>Una embriagadora mezcla de monumentos legendarios, arte imponente y
+            vibrante vida callejera hace de Roma, la Ciudad Eterna,
+            una de las capitales más hermosas del mundo.
+          </p>
+          <img class="img-fluid" src="img/roma.jpg" alt="Roma">
+          <div class="table-responsive">
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th>
+                    <p class="text-center">Itinerario</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h6 class="text-center">1º DÍA : ROMA</h6>
+                    <p class="text-center">Llegada a Roma y traslado compartido al hotel.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">2º DÍA : ROMA</h6>
+                    <p class="text-center">Recogida en el hotel para la realización de la excursión
+                      a pie “Descubriendo
+                      Roma”,
+                      con este tour a pie de 3 horas podrá ver los sitios más famosos de la
+                      ciudad,
+                      en una sola mañana viajará a través de siglos de historia y
+                      descubrirá las principales atracciones de la ciudad.
+                      Empezando en Largo Argentina se visita Campo de’ Fiori, Plaza Farnese,
+                      Plaza Navona, Pantheon, la Fontana de Trevi y Plaza de España. Resto del día
+                      libre.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">3º DÍA : ROMA</h6>
+                    <p class="text-center">Día libre.</p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">4º DÍA : ROMA</h6>
+                    <p class="text-center">Traslado compartido al aeropuerto. Fin de los servicios.
+                    </p>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Desde 481€</h3>
+        </div>
+        <hr>
+        <div id="scroll2">
+          <h3 class="text-center">VIENA, VENECIA, FLORENCIA Y ROMA</h3>
+          <p>recorre las ciudades artísticamente más notables de Europa,
+            comenzando en la imperial Viena y finalizando en la eterna Roma.
+            Un viaje de los que serenan el espíritu, un baño de Arte mayúsculo
+            en unas ciudades que mantienen la esencia de su más espléndida época,
+            con el mandato de conservar sus tesoros para disfrute de la Humanidad.
+            Un reto en el que todos estamos implicados, porque merece la pena disfrutar
+            de tan ingente patrimonio.
+          </p>
+          <img class="img-fluid" src="img/venecia.jpg" alt="Venecia">
+          <div class="table-responsive">
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th>
+                    <p class="text-center">Itinerario</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h6 class="text-center">1º DÍA : CIUDAD DE ORIGEN - VIENA</h6>
+                    <p class="text-center">Llegada a Roma y traslado compartido al hotel.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">2º DÍA : VIENA</h6>
+                    <p class="text-center">Después del desayuno haremos una visita de la ciudad más
+                      imperial de Europa recorriendo
+                      su elegantísimo anillo. Veremos una de la Óperas más prestigiosa del mundo,
+                      el
+                      Hotel Imperial,
+                      Museos, el Palacio de Hofburg, el Parlamento, el Ayuntamiento, la Iglesia
+                      Votiva
+                      y
+                      la Iglesia de San Carlos Borromeo. Avanzamos hacia el Canal del Danubio,
+                      donde contemplaremos la zona moderna de Viena continuando hasta el parque de
+                      atracciones de
+                      El Prater famoso por su noria. Haremos una parada en el Palacio del
+                      Belvedere
+                      para disfrutar
+                      de sus jardines de estilo francés. Tarde libre. Por la noche podremos
+                      asistir,
+                      opcionalmente,
+                      a un concierto con composiciones de Mozart y Strauss, la mejor opción en la
+                      capital de la música
+                      clásica..</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">3º DÍA : VIENA - VENECIA</h6>
+                    <p class="text-center">Emprendemos viaje por carretera, ya desayunados,
+                      hacia la frontera con Italia, atravesando las regiones alpinas de Estiria y
+                      Carintia hasta llegar a Venecia. Alojamiento.</p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">4º DÍA : VENECIA - FLORENCIA</h6>
+                    <p class="text-center">Después del desayuno nos dejaremos extasiar por la ciudad
+                      de Venecia con sus 118 islas y sus más de 400 puentes, surcada por multitud
+                      de canales, puentes y palacios de abolengo. Tiempo libre. Para los que
+                      deseen,
+                      organizaremos una serenata musical en góndolas (opcional).
+                      Más tarde partimos por autopista atravesando los Apeninos hasta la ciudad de
+                      Florencia. Alojamiento.</p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">5º DÍA : FLORENCIA - ROMA</h6>
+                    <p class="text-center">En este día haremos una visita a pie, tras el desayuno,
+                      por esta hermosa ciudad, donde el arte se siente a cada paso. Recorreremos
+                      la plaza de San Marcos, pasando por delante de la Academia de las Bellas
+                      Artes
+                      y llegando al mercado de la Paja. Contemplaremos la combinación de mármoles
+                      en
+                      la fachada de la Catedral Santa María del Fiore con su inconfundible
+                      campanario
+                      de Giotto, y la Puerta del Paraíso que da acceso al Baptisterio.
+                      Extasiados de tanto arte, emprenderemos marcha hacia Roma. Llegada y
+                      alojamiento.
+                      Por la tarde noche podremos realizar una excursión (opcional) a la Roma
+                      Barroca.
+                    </p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">6º DÍA : ROMA</h6>
+                    <p class="text-center">Desayuno en el hotel. Haremos un completo recorrido por
+                      la
+                      Roma Papal,
+                      la Roma del Imperio y la Roma de la Modernidad. Llegaremos hasta la Plaza
+                      Venecia pasando
+                      por la Avenida de los Foros Imperiales, apreciando la grandeza de esta urbe
+                      en
+                      los primeros
+                      años de la era cristiana. Nos encontramos con el Coliseo, símbolo por
+                      excelencia
+                      de la ciudad.
+                      Pasaremos también por el Circo Máximo, la Basílica de Santa María la Mayor y
+                      atravesando
+                      el río Tíber, llegaremos a la Ciudad del Vaticano, el Estado más pequeño del
+                      mundo.
+                      Pueden realizar una completa excursión opcional visitando los Museos
+                      Vaticanos,
+                      la Basílica de San Pedro y la Capilla Sixtina, donde, en riguroso silencio,
+                      admiraremos dos de llas obras más importantes de Miguel Ángel: la Bóveda y
+                      el
+                      Juicio Final.
+                      Una visita excepcional contemplando las obras de Miguel Ángel, Bernini,
+                      Botticelli,
+                      y todos los grandes del Renacimiento italiano, que han enriquecido con su
+                      arte
+                      este Estado. </p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">7º DÍA : ROMA</h6>
+                    <p class="text-center">Desayuno y día libre. Proponemos una excursión (opcional)
+                      de día completo con almuerzo incluido a Nápoles, Pompeya y Capri.
+                      Saldremos de Roma hacia Pompeya donde nos ofrecerán un café antes de entrar
+                      a visitar las ruinas de esta ciudad, sepultada por las cenizas del volcán
+                      Vesubio en
+                      su erupción en el año 79 dC. Más tarde realizamos un pequeño recorrido por
+                      Nápoles,
+                      para llegar al puerto y embarcar con destino a la isla de Capri.
+                      Desembarcamos
+                      y,
+                      con un pequeño autobús, subimos a 600 metros de altura para llegar a
+                      Anacapri,
+                      desde donde tenemos unas vistas inmejorables de la isla. Aquí comeremos,
+                      y tendremos tiempo libre antes de volver al puerto y hacer el camino de
+                      regreso
+                      a Roma.</p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">8º DÍA : ROMA - CIUDAD DE ORIGEN</h6>
+                    <p class="text-center">Desayuno. Ahora ya, por su cuenta, y dependiendo del
+                      horario
+                      de su vuelo,
+                      pueden hacer sus últimos paseos por Roma antes de dirigirse al aeropuerto.
+                      Nosotros nos despedimos deseándoles un buen viaje de regreso.</p>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Desde 834 €</h3>
+        </div>
+        <hr>
+        <div id="scroll3">
+          <h3 class="text-center">4 DÍAS EN BUDAPEST CON VISITA</h3>
+          <p>
+            El Danubio, fuente de inspiración para numerosos artistas,
+            separa con su inmensidad Buda y Pest, dos grandes ciudades
+            que hoy se unen para formar una de las capitales europeas de mayor importancia.
+            Enormes puentes unen ambas orillas acercando Buda, la antigua sede real y
+            zona residencial más elegante, y Pest, corazón económico y comercial de la ciudad.
+            Atrévete a perderte por sus calles repletas de historia y descubrirás
+            por qué Budapest es conocida como "La Perla del Danubio" y es visitada
+            por más de 6 millones de turistas cada año. Te hechizará.
+          </p>
+          <img class="img-fluid" src="img/budapest.jpg" alt="Budapest">
+          <div class="table-responsive">
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th>
+                    <p class="text-center">Itinerario</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h6 class="text-center">1º DÍA : BUDAPEST</h6>
+                    <p class="text-center">Llegada a Budapest y traslado al hotel.
+                      Información de datos prácticos y entrega de toda la documentación.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">2º DÍA : BUDAPEST</h6>
+                    <p class="text-center">Budapest, “la perla del Danubio”, se extiende a lo largo
+                      de ambas
+                      orillas del río. Buda es la parte más antigua, residencial y de colinas,
+                      mientras que Pest es la de los negocios y comercios. Recogida en el hotel,
+                      la primera parada de la Visita Panorámica es la plaza más grande y más
+                      impresionante
+                      de la ciudad: la Plaza de los Héroes, sobre la elegante alameda Andrássy,
+                      del período
+                      de oro de Pest. Pasaremos por el Teatro Nacional de la Ópera, desde donde
+                      nos dirigiremos
+                      hacia el Parlamento, para completar la imagen de la ciudad. Continuamos la
+                      vuelta
+                      en el distrito del Castillo que se extiende a Buda, en la cima de la colina
+                      del mismo nombre.
+                      Se atraviesa el río sobre el puente Margarita y se pasa muy cerca de la Isla
+                      Margarita,
+                      para ir a los Baños Turcos Király, surgidos en los tiempos turcos, y
+                      finalmente el puente
+                      más antiguo y hermoso del río: El puente de las Cadenas.
+                      Tarde libre y dedicada a tours opcionales.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">3º DÍA : BUDAPEST</h6>
+                    <p class="text-center">Día libre para seguir recorriendo esta bella ciudad
+                      centroeuropea
+                      o apuntarse a alguna excursión opcional.</p>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <h6 class="text-center">4º DÍA : BUDAPEST</h6>
+                    <p class="text-center">Tiempo libre hasta la hora indicada por nuestros
+                      representantes,
+                      recogida en el hotel y traslado al aeropuerto de Budapest.
+                      Despedida y fin de nuestros servicios.
+                    </p>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Desde 308€</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tour details content css end-->
+  <main class="cards">
+    <img src="img/23m.jpg" alt="Sample photo">
+    <img src="img/24m.jpg" alt="Sample photo">
+    <img src="img/30m.jpg" alt="Sample photo">
+    <img src="img/32m.jpg" alt="Sample photo">
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      <p> © 2019 Triport - Todos los derechos reservados.</p>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+  <a href="#up" class="simplescrollup__button simplescrollup__button--hide"><img src="img/boton.png" alt="boton"></a>
+</body>
+
+</html>

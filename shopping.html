@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Triport</title>
+  <meta name="author" content="Mónica Ilenia Tardón Vera" />
+  <link rel="icon" href="img/logo.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+  <!-- style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/showls.js"></script>
+</head>
+
+<body>
+  <!--::header part start::-->
+  <header>
+    <div class="container">
+      <div class="row align-items-center ">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+            <a class="navbar-brand" href="index.html"> <img src="img/logo2.png" alt="logo" style="width:60px;"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse main-menu-item justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="hotel.html">Hotel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="packages.html">Packages</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown_1" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Tour
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                    <a class="dropdown-item" href="tour_details.html">detalles</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+            <a class="nav-link" href="login.html"><i class="far fa-user"></i></a>
+            <a class="nav-link" href="rss.xml"><i class="fas fa-rss"></i></a>
+            <a class="nav-link" href="shopping.html"><i class="fas fa-shopping-cart"></i></a>
+            <a class="nav-link" id="btnLogout"><i class="fas fa-sign-out-alt"></i></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header part end-->
+
+  <!-- Shopping  part start-->
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col">
+        <div class="row justify-content-center text-center" id="loaders">
+          <h1>Su compra se esta procesando espere</h1>
+          <img src="img/cargando.gif" alt="Cargando" width="220">
+        </div>
+
+        <div class="row justify-content-center text-center" id="check">
+          <h1>Su compra se ha procesado correctamente</h1>
+          <img id="cargando" src="img/check.gif" alt="guardado" width="220">
+          <a  href="last_shopping.html"><h4>Puedes consultar tus ultimas compras clickando aqui o en la seccion de packages</h4></a>
+        </div>
+        <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+        <div id="cart" class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+
+            </thead>
+            <tbody id="shopping-list">
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th colspan="2"><button class="btn btn-secondary" id="empty">Vaciar cesta</button></th>
+                <th colspan="1" scope="col" class="text-right">TOTAL :</th>
+                <th scope="col">
+                  <p id="total"></p>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="row justify-content-between">
+          <div class="col-md-4 mb-2">
+            <a href="packages.html" class="btn btn-info btn-block">Seguir comprando</a>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <a href="#" class="btn btn-success btn-block" id="process-purchase">Realizar compra</a>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- Shopping  part start-->
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" media="screen" href="css/rss.css"?>
+<rss version="2.0">
+
+<channel>
+  <title>Triport:: Últimas noticias</title>
+  <link>https://agengy-a9dae.firebaseapp.com/</link>
+  <description>Planea tu viaja con nosotros</description>
+  <item>
+    <title>Los mejores hoteles</title>
+    <link>https://agengy-a9dae.firebaseapp.com/hotel.html</link>
+    <description>Aquí encontraras los mejores hoteles de los distintos continentes.</description>
+  </item>
+  <item>
+    <title>Packages</title>
+    <link>https://agengy-a9dae.firebaseapp.com/packages.html</link>
+    <description>Los mejores pack encontraras aquí</description>
+  </item>
+</channel>
+
+</rss>

@@ -1,0 +1,248 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #000026;
+  } 
+span{font-size: 1.8vw;}
+.jumbotron{
+ margin-bottom:0;
+}
+
+.game{
+  background-color: orange;
+  color: white;
+}
+.tabdar{
+  background-color: #3a507a;
+  color: #fff;
+}
+.tabdar a{color: #fff;}
+.tabdar li a:hover{
+    background-color: #000026;
+    color: white;
+  }
+  .tabdar tab{
+    background-color: #000026;
+  }
+
+#myTabContent table{
+  background-color: #3a507a;
+  color: #fff;
+  border-right: 1px solid black;
+}
+.img-thumbnail{
+width:152px; 
+height:118px;
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+.galery {filter: grayscale(80%);}
+.galery:hover {filter: grayscale(0%);}
+.breadcrumb {
+    background-image: url("../img/breadcrumb.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 300px;
+    max-width: 100%;
+    vertical-align: middle;
+    color: #fff;
+    margin-bottom: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .breadcrumb:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    content: "";
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    max-height: 100vh;
+  }
+  .cards img {
+    margin: 10px;
+    max-width: 23vw;
+  }
+.scrollspy-example {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+  }
+
+hr{
+    border-top: 3px double #000026;;
+  }
+header{
+  background-color:#06284E;
+  color:white;
+}
+#error-name{
+  display: none;
+  color: red;
+}
+#error-age{
+  display: none;
+  color: red;
+}
+#error-email{
+  display: none;
+  color: red;
+}
+#error-selector{
+  display: none;
+  color: red;
+}
+#error-sexo{
+  display: none;
+  color: red;
+}
+#error-mensaje{
+  display: none;
+  color: red;
+}
+#error-checkbox{
+  display: none;
+  color: red;
+}
+#error-destino{
+  display: none;
+  color: red;
+}
+#error-hotel{
+  display: none;
+  color: red;
+}
+#error-description{
+  display: none;
+  color: red;
+}
+#error-price{
+  display: none;
+  color: red;
+}
+#error-photo{
+  display: none;
+  color: red;
+}
+#error-conf{
+  display: none;
+  color: red;
+}
+#content{
+  display: none;
+}
+
+#login-user{
+  display: block;
+}
+
+#btnLogout{
+ display: none;
+}
+
+#user{
+  display: none;
+ }
+
+#last-shopping{
+  display: none;
+ }
+#loaders{
+  display: none;
+ }
+ #check{
+  display: none;
+ }
+
+.page-footer{
+  background-color:#06284E;
+  color:white;
+}
+#div-game{color:black;}
+canvas {
+    border:3px solid #d9d9d9;  
+    padding:10px;
+    box-sizing:border-box;
+    width:50%;
+}
+.imgame{
+  width:60px;
+  height:60px;
+}
+.edit {
+  margin-left: 1em;
+}
+
+
+#update-button {
+  display: none;
+}
+
+#cancel-button {
+  margin-top: -2.4em;
+  margin-left: 5em;
+  display: none;
+}
+
+
+.gallery-block{padding-bottom: 60px; padding-top: 60px;}
+.gallery-block .heading{margin-bottom: 50px; text-align: center;}
+
+.gallery-block .heading h2{font-weight: bold;font-size: 1.4rem; text-transform: uppercase;}
+
+.gallery-block.cards-gallery h6{font-size: 20px; font-weight: bold;}
+
+.gallery-block.cards-gallery .card{transition: 0.4s easy;}
+.gallery-block.cards-gallery .card img{box-shadow: 0px 2px 10px rgba(0,0,0,0.15);}
+.gallery-block.cards-gallery .card-body{text-align: center;}
+.gallery-block.cards-gallery .card-body p{font-size: 15px;}
+.gallery-block.cards-gallery a{color:#212529; }
+.gallery-block.cards-gallery a:hover{text-decoration: none;}
+.gallery-block.cards-gallery  .card{
+	margin-bottom: 30px;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+}
+
+@media (min-width: 576px) {
+
+	.gallery-block .transform-on-hover:hover {
+	    transform: translateY(-10px) scale(1.02);
+	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+	}
+}
+
+
+.simplescrollup__button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  transition: 1s all;
+  z-index: 10000;
+}
+.simplescrollup__button--show {
+  transform: translateX(0);
+}
+.simplescrollup__button--hide {
+  transform: translateX(100px);
+}
+
+
